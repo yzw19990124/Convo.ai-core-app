@@ -1,0 +1,124 @@
+/* Futuristic font and base styling */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;500;700&display=swap');
+
+/* Global settings */
+* {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+    background: #0e0e0e;
+    color: #d5d5d5;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header stays at the top */
+  .header-with-icon {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #212121;
+  }
+  
+  /* Main content area */
+  .main-content {
+    flex: 1; /* Takes up the remaining space */
+    display: flex; /* Enables flex context for child elements */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Centers children horizontally */
+    justify-content: start; /* Align children to the start of the main axis */
+    padding: 20px; /* Adds some padding around the content */
+  }
+  
+  /* Unity container */
+  #unity-container {
+    max-width: 480px;
+    height: 300px;
+    margin-bottom: 40px; /* Adds some space between the Unity container and the chat-box */
+  }
+  
+  /* Chat box */
+  .chat-box {
+    position: relative;
+    width: 100%; /* Full width */
+    max-width: 960px; /* Maximum width */
+    height: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: rgba(33, 33, 33, 0.8);
+    border-radius: 5px;
+    overflow-y: auto;
+    margin-bottom: 10px; /* Adds space between chat-box and the bottom of the viewport */
+  }
+  
+  /* Footer or any additional content goes here */
+  .footer {
+    padding: 10px;
+    background: #212121;
+  }
+  
+  
+
+/* Button styling with hover effects */
+button {
+  background: #333;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #4CAF50;
+}
+
+button:disabled {
+    background: #555; /* Darker background for disabled state */
+    color: #aaa; /* Lighter text color to indicate it's not active */
+    cursor: default; /* Default cursor to indicate it's not clickable */
+    opacity: 0.5; /* Transparency to make it look inactive */
+  }
+
+/* Loader updated styling */
+.loader {
+    display: flex; /* Use flexbox to center the dots horizontally and vertically */
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Absolute position relative to the chatbox */
+    top: 50%; /* Position at 50% from the top of the chatbox */
+    left: 50%; /* Position at 50% from the left of the chatbox */
+    transform: translate(-50%, -50%); /* Offset the loader to center it exactly */
+    background-color: lightgrey;
+    border-radius: 20px;
+    padding: 5px 10px;
+  }
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: #4CAF50; /* Changed from black to theme color */
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 2px;
+  animation: dotFlashing 1s infinite alternate;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes dotFlashing {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
