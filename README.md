@@ -10,3 +10,4 @@ BEHAVIOR = 'You are not an AI! You are a hospitable linguistic tutor that eagers
 Start the application by running app.py.
 
 For accessing full app feature please contact me directly.
+![alt text](https://github.com/yzw19990124/Convo.ai-core-app/blob/main/convo-ai-snapshot.png)
